@@ -13142,8 +13142,14 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">string_Arr_to_float</span><span class="p">(</span><span class="n">str_arr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    func: convert all string numbers in list to float</span>
+<span class="sd">    param:  list of string numbers</span>
+<span class="sd">    out:  list of float numbers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">str_arr</span><span class="p">)):</span>
-        <span class="n">str_arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_arr</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">str_arr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_arr</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">str_arr</span>
 </pre></div>
 
@@ -13158,6 +13164,14 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">depth_xml_to_arr</span><span class="p">(</span><span class="n">depthFilePath</span><span class="p">,</span><span class="n">beginFrm</span><span class="p">,</span> <span class="n">endFrm</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    func: load depth image data from given range of frames, and append label</span>
+<span class="sd">    param: depthFilePath - path to file where frames are found</span>
+<span class="sd">           beginFrm - first frame of activty </span>
+<span class="sd">           endFrm - last frame of activty</span>
+<span class="sd">           label - label of activity</span>
+<span class="sd">    out: list of touples contatining depth data of each frame between beginFrm and endFrm and label</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">xmlFiles</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">depthFilePath</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.xml&#39;</span><span class="p">)]</span>
     <span class="n">xmlFiles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">),</span> <span class="n">item</span><span class="p">))</span>
     <span class="n">depthSequence</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13181,7 +13195,7 @@ div#notebook {
             <span class="n">depthData</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">floatData</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">320</span><span class="p">)</span>
             <span class="n">depthSequence</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">depthData</span><span class="p">,</span><span class="n">label</span><span class="p">))</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">xmlFile</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Problem in: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">xmlFile</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">depthSequence</span>
 </pre></div>
 
