@@ -1,8 +1,8 @@
 # RGBD Activty Detection
 
-Activity detection network trained on UTKinect dataset
+Activity detection network trained on UTKinect-Action 3D dataset
 
-## UTKinect Dataset
+## UTKinect-Action 3D Dataset
 https://cvrc.ece.utexas.edu/KinectDatasets/HOJ3D.html
 
 ## Docs
