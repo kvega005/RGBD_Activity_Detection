@@ -124,7 +124,7 @@ walk: 294 426
 sitDown: 710 818
 standUp: 856 956
 pickUp: 1088 1174
-carry: 2030 2202
+carry: 2032 2202
 throw: 2518 2562
 push: 2702 2726
 pull: 2770 2808
@@ -143,7 +143,7 @@ waveHands: 3666 3902
 clapHands: 3990 4128
 s07_e02
 walk: 552 638
-sitDown: 880 1014
+sitDown: 882 1014
 standUp: 1014 1146
 pickUp: 1228 1352
 carry: 1352 1518
@@ -191,7 +191,7 @@ sitDown: 1026 1158
 standUp: 1206 1310
 pickUp: 1546 1678
 carry: 1714 2120
-throw: 2468 2522
+throw: 2470 2522
 push: 2696 2760
 pull: 2770 2838
 waveHands: 4708 4872
