@@ -13,7 +13,7 @@ Models were modified to support rgb-d images
 https://cvrc.ece.utexas.edu/KinectDatasets/HOJ3D.html
 
 ## Docs
-### FastAI
+#### FastAI:
 https://docs.fast.ai/
 
 ## Results
