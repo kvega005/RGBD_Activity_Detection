@@ -21,5 +21,4 @@ https://docs.fast.ai/
 Test Set Accuracy: 98.47%
 
 For more information see:
-
-RGBD_Activity_Detection.ipynb
+  RGBD_Activity_Detection.ipynb
