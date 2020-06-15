@@ -3,8 +3,9 @@
 Activity detection network trained on UTKinect-Action 3D dataset
 
 ## Model(s)
-*ResNet34
-*ResNet50
+- ResNet34
+- ResNet50
+
 Models were modified to support 4 rgb-d image
 
 ## UTKinect-Action 3D Dataset
