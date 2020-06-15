@@ -17,6 +17,9 @@ https://cvrc.ece.utexas.edu/KinectDatasets/HOJ3D.html
 https://docs.fast.ai/
 
 ## Results
+
 Test Set Accuracy: 98.47%
+
 For more information see:
+
 RGBD_Activity_Detection.ipynb
